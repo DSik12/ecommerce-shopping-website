@@ -1,0 +1,306 @@
+@import '../../components/shared/ScssBreakpoint/Breakpoint.scss';
+$color_1: black;
+$color_2: white;
+$background-color_1: rgb(211, 102, 102);
+
+@mixin oneStep() {
+  background: linear-gradient(to bottom, #05b251, #05a84c);
+  color: $color_2;
+}
+
+@mixin orderStep-a() {
+  color: $color_1;
+  text-decoration: none;
+  background: white;
+  height: 30px;
+  border: 2px solid black;
+  width: 150px;
+  text-align: center;
+  margin: 0px 20px;
+  box-shadow: 1px 2px rgba(0, 0, 0, 0.774);
+
+  &:hover {
+    background: linear-gradient(to bottom, #05b251, #05a84c);
+  }
+}
+
+@mixin orderStep() {
+  display: flex;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+@mixin orderStepMob() {
+  color: $color_1;
+  text-decoration: none;
+  background: white;
+  height: 30px;
+  border: 2px solid black;
+  width: 83%;
+  text-align: center;
+  margin: 30px 32px;
+  box-shadow: 1px 2px rgba(0, 0, 0, 0.774);
+  display: block;
+  &:hover {
+    background: linear-gradient(to bottom, #05b251, #05a84c);
+  }
+}
+
+.itemsDetails {
+  margin: 130px 40px 20px 40px;
+  color: $color_1;
+  display: flex;
+  p {
+    &:nth-child(2) {
+      margin-left: 30px;
+    }
+  }
+}
+
+.orderStep {
+  a {
+    @include orderStepMob();
+  }
+  margin-top: 40px 0px 30px 40px;
+  h1 {
+    text-align: center;
+  }
+}
+
+#shipping-checkout{
+  background: linear-gradient(to bottom, #05b251, #05a84c);
+  color: white;
+}
+
+#oneStep {
+  @include oneStep();
+}
+
+.continueButton {
+  width: 200px;
+  background: linear-gradient(to bottom, #05b251, #05a84c);
+  border: 2px solid black;
+  padding: 10px 50px;
+  margin: 20px 15px 15px 40px;
+  box-shadow: 1px 2px rgba(0, 0, 0, 0.774);
+  cursor: pointer;
+  color: white;
+  font-size: larger;
+}
+
+.continue {
+  margin-bottom: 200px;
+}
+
+.descriptionShipping {
+  display: none;
+}
+
+.firstShippingProduct {
+  display: flex;
+  margin: 30px 0px;
+}
+
+.shippingCart {
+  margin: 40px 10px;
+
+  img {
+    margin: 30px 5px 0px 0px;
+  }
+}
+
+.describeFirst .sellerFirst {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.firstProduct {
+  display: flex;
+  flex-wrap: wrap;
+
+  p {
+    padding: 10px 20px 10px 0px;
+  }
+}
+
+.freeFirst {
+  .freeGreen {
+    color: #05b251;
+  }
+
+  padding-bottom: 20px;
+  border-bottom: 2px solid;
+}
+
+.flipkart {
+  height: 20px;
+  width: 50px;
+  margin-left: 30px;
+}
+
+.sellerFirst {
+  display: inline;
+}
+
+.amazon {
+  display: flex;
+  margin: 80px 40px;
+  border: 2px solid black;
+  height: 100px;
+  overflow: hidden;
+
+  img {
+    margin-left: -10px;
+  }
+
+  p {
+    margin-top: 20px;
+  }
+}
+
+.descripeItem {
+  border: 0px white solid;
+  height: 20px;
+  overflow: hidden;
+}
+
+@media(min-width: $tablet-portrait) {
+  
+  .orderStep {
+    a {
+      @include orderStepMob();
+    }
+    display: flex;
+    margin-top: 40px 0px 30px 40px;
+    h1 {
+      margin-right: 60px;
+    }
+  }
+  #oneStep {
+    @include oneStep();
+  }
+
+  .amazon {
+    display: flex;
+    margin: 80px 40px;
+    border: 2px solid black;
+
+    img {
+      margin-left: -10px;
+    }
+  }
+
+  .shippingCart {
+    img {
+      margin: 30px 5px 0px 0px;
+    }
+
+    margin: 40px 10px;
+  }
+
+  .descriptionShipping {
+    display: none;
+  }
+}
+
+@media(min-width: $tablet-landscape){
+  
+  .orderStep {
+    a {
+      @include orderStep-a();
+    }
+    @include orderStep();
+    h1 {
+      margin-right: 60px;
+    }
+  }
+  #oneStep {
+    @include oneStep();
+  }
+
+  .editDetails {
+    display: flex;
+    flex-wrap: nowrap;
+
+    div {
+      width: 25%;
+      margin: 20px 0px 50px 30px;
+    }
+  }
+
+  .amazon {
+    display: none;
+  }
+
+  .shippingCart {
+    img {
+      margin: 30px 50px 0px 10px;
+    }
+
+    margin: 40px;
+  }
+
+  .descriptionShipping {
+    display: unset;
+  }
+}
+
+@media(min-width: $laptop){
+  
+  .orderStep {
+    a {
+      @include orderStep-a();
+    }
+    @include orderStep();
+    h1 {
+      margin-right: 60px;
+    }
+  }
+
+  #oneStep {
+    @include oneStep();
+  }
+
+  .amazon {
+    display: none;
+  }
+
+  .shippingCart {
+    img {
+      margin: 30px 50px 0px 10px;
+    }
+
+    margin: 40px;
+  }
+}
+
+@media(min-width: $desktop){
+  
+  .orderStep {
+    a {
+      @include orderStep-a();
+    }
+    @include orderStep();
+
+    h1 {
+      margin-right: 30px;
+    }
+  }
+  #oneStep {
+    @include oneStep();
+  }
+
+  .amazon {
+    display: none;
+  }
+
+  .shippingCart {
+    img {
+      margin: 30px 50px 0px 10px;
+    }
+
+    margin: 40px;
+  }
+}

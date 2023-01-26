@@ -1,0 +1,230 @@
+@import '../../components/shared/ScssBreakpoint/Breakpoint.scss';
+$color_1: black;
+$color_2: white;
+$background-color_1: rgb(211, 102, 102);
+
+@mixin oneStep() {
+	background: linear-gradient(to bottom, #05b251, #05a84c);
+	color: $color_2;
+}
+
+@mixin orderStep-a() {
+	color: $color_1;
+	text-decoration: none;
+	background: white;
+	height: 30px;
+	border: 2px solid black;
+	width: 150px;
+	text-align: center;
+	margin: 0px 20px;
+	box-shadow: 1px 2px rgba(0, 0, 0, 0.774);
+
+	&:hover {
+		background: linear-gradient(to bottom, #05b251, #05a84c);
+	}
+}
+
+@mixin orderStep() {
+	display: flex;
+	margin-bottom: 30px;
+	margin-top: 40px;
+	margin-right: 40px;
+	margin-left: 40px;
+}
+
+@mixin noSpinBtn() {
+	-moz-appearance: textfield;
+	&::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+}
+
+@mixin orderStepMob() {
+	color: $color_1;
+	text-decoration: none;
+	background: white;
+	height: 30px;
+	border: 2px solid black;
+	width: 83%;
+	text-align: center;
+	margin: 30px 32px;
+	box-shadow: 1px 2px rgba(0, 0, 0, 0.774);
+	display: block;
+	&:hover {
+		background: linear-gradient(to bottom, #05b251, #05a84c);
+	}
+}
+
+.itemsDetails {
+	margin: 130px 40px 20px 40px;
+	color: $color_1;
+	display: flex;
+	p {
+		&:nth-child(2) {
+			margin-left: 30px;
+		}
+	}
+}
+
+.orderStep {
+	a {
+		@include orderStepMob();
+	}
+	margin-top: 40px 0px 30px 40px;
+	h1 {
+		text-align: center;
+	}
+}
+
+#paymentForm {
+	display: block;
+	fieldset {
+		margin: 50px 0 0 0;
+		border-color: black;
+	}
+	legend {
+		padding: 5px 10px;
+		color: black;
+	}
+	div {
+		margin: 20px 15px;
+	}
+}
+
+#payment-checkout {
+	background: linear-gradient(to bottom, #05b251, #05a84c);
+	color: white;
+}
+
+#oneStep {
+	@include oneStep();
+}
+
+#errorMsgPayment {
+	background-color: $background-color_1;
+	font-weight: bolder;
+	width: 200px;
+	margin: 0 25px;
+}
+
+#errorMsg {
+	background-color: $background-color_1;
+	display: none;
+	font-weight: bolder;
+}
+
+#billingPin {
+	@include noSpinBtn();
+}
+
+#shippingPin {
+	@include noSpinBtn();
+}
+
+#cardNo {
+	@include noSpinBtn();
+}
+
+#cvvNo {
+	@include noSpinBtn();
+}
+
+.paymentInformation {
+	margin: 0px 20px;
+	input {
+		display: block;
+		margin: 25px;
+		height: 25px;
+		width: 250px;
+	}
+	#cardNo {
+		margin-top: 25px;
+	}
+	#cvvNo {
+		width: 80px !important;
+	}
+}
+
+.continueButton {
+	width: 200px;
+	background: linear-gradient(to bottom, #05b251, #05a84c);
+	border: 2px solid black;
+	padding: 10px 50px;
+	margin: 20px 15px 15px 40px;
+	box-shadow: 1px 2px rgba(0, 0, 0, 0.774);
+	cursor: pointer;
+	color: $color_2;
+	font-size: larger;
+}
+
+.continue {
+	margin-bottom: 200px;
+}
+
+@media(min-width: $tablet-portrait) {
+	.orderStep {
+		a {
+			@include orderStepMob();
+		}
+		display: flex;
+		margin-top: 40px 0px 30px 40px;
+		h1 {
+			margin-right: 60px;
+		}
+	}
+	#oneStep {
+		@include oneStep();
+	}
+}
+
+@media(min-width: $tablet-landscape) {
+	.orderStep {
+		a {
+			@include orderStep-a();
+		}
+		@include orderStep();
+
+		h1 {
+			margin-right: 60px;
+		}
+	}
+	#oneStep {
+		@include oneStep();
+	}
+}
+
+@media(min-width: $laptop) {
+	.orderStep {
+		a {
+			@include orderStep-a();
+		}
+		@include orderStep();
+		h1 {
+			margin-right: 60px;
+		}
+	}
+	#oneStep {
+		@include oneStep();
+	}
+}
+
+@media(min-width: $desktop) {
+	.orderStep {
+		a {
+			@include orderStep-a();
+		}
+		@include orderStep();
+
+		h1 {
+			margin-right: 30px;
+		}
+	}
+	#oneStep {
+		@include oneStep();
+	}
+}

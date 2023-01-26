@@ -1,0 +1,140 @@
+@import "../../shared/ScssBreakpoint/Breakpoint.scss";
+
+$Primary-color: #0099e0;
+$background-color: white;
+
+@mixin text-decoration($param) {
+    text-decoration: $param;
+}
+
+.sidebar {
+    display: none;
+}
+
+.dropright {
+    font-size: 10px;
+    a {
+        @include text-decoration(none);
+        font-size: 16px;
+    }
+}
+
+#filterLaptop, #filterMobile{
+    color: $Primary-color;
+    @include text-decoration(underline);
+    font-size: 13px;
+    cursor: pointer;
+}
+
+@media (min-width: $tablet-portrait) {
+    .sidebar {
+        display: block;
+        width: 20%;
+        box-sizing: border-box;
+        height: 100%;
+        margin: 10px 10px 0 5px;
+        background-color: $background-color;
+
+        ul {
+            position: relative;
+            list-style-type: none;
+
+            .dropright:hover ul {
+                display: initial;
+            }
+
+            li a {
+                display: flex;
+                margin-top: 5px;
+                align-items: center;
+                font-size: 14px;
+                padding: 10px 0 10px 50px;
+                color: $Primary-color;
+                text-transform: capitalize;
+                @include text-decoration(none);
+            }
+
+            li a:hover {
+                @include text-decoration(underline);
+                // text-decoration: underline;
+            }
+
+            #logos {
+                position: absolute;
+                left: 0px;
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+            #arrow {
+                position: absolute;
+                right: 0px;
+                font-size: 12px;
+            }
+
+            .dropright {
+                position: relative;
+            }
+
+            ul {
+                position: absolute;
+                display: none;
+                left: 150px;
+                width: 90px;
+                top: 0px;
+                background-color: $background-color;
+                border-radius: 5px;
+                box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.1);
+                li a {
+                    text-align: center;
+                    padding-left: 0px;
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                }
+            }
+        }
+        .filter {
+            margin-left: 20px;
+        }
+
+        .categoriesHeadingWrapper .viewAll a {
+            color: $Primary-color;
+            font-size: 12px;
+            @include text-decoration(none);
+            padding-left: 10%;
+        }
+
+        .viewAll a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    #filterLaptop, #filterMobile{
+        color: $Primary-color;
+        @include text-decoration(underline);
+        font-size: 13px;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: $laptop) {
+    .sidebar {
+        ul ul {
+            position: absolute;
+            display: none;
+            left: 200px;
+        }
+        .categoriesHeadingWrapper .viewAll a {
+            padding-left: 25%;
+        }
+    }
+
+    #filterLaptop, #filterMobile{
+        color: $Primary-color;
+        @include text-decoration(underline);
+        font-size: 13px;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,36 @@
+@import '../../shared/ScssBreakpoint/Breakpoint.scss';
+
+.featureItems {
+	display: none;
+}
+.FeatureBoxStyle img{
+	// width: 15%;
+	// height: auto;
+	object-fit: cover;
+	object-position: bottom;
+}
+@media (min-width: $tablet-portrait) {
+	.featureItems {
+		display: flex;
+		justify-content: space-around;
+		margin: 0px 10px;
+	}
+	.FeatureBoxStyle {
+		display: flex;
+		border: solid aliceblue;
+		margin: 30px;
+		width: 100%;
+		text-align: center;
+		padding: 10px;
+	}
+	.BoxContentStyle{
+		display: block;
+		white-space:pre-wrap;
+	}
+}
+
+@media (min-width: $laptop){
+	.BoxContentStyle{
+	width : 100%;
+	}
+}

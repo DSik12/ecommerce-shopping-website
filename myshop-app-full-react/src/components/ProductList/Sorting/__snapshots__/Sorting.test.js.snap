@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sorting Component should have component snapshot 1`] = `
+Array [
+  <h3
+    className="products-heading"
+  >
+    Products
+  </h3>,
+  <div
+    className="products140"
+  >
+    <p
+      className="products-heading-140"
+      id="productsCount"
+    >
+       
+    </p>
+    <p
+      className="filterText"
+    >
+      Filter
+    </p>
+    <div
+      className="forForm"
+    >
+      <div
+        className="sort"
+      >
+        <span>
+          <label
+            className="sortLabel"
+            htmlFor="filter"
+          >
+            <b>
+              Sort   
+            </b>
+          </label>
+        </span>
+        <span>
+          <select
+            className="filtered"
+            data-testid="sortingTypes"
+            id="selectTag"
+            name="filter"
+            onChange={[Function]}
+          >
+            <option
+              value="none"
+            >
+              Latest
+            </option>
+            <option
+              value="bestSeller"
+            >
+              Best Sellers
+            </option>
+            <option
+              value="featured"
+            >
+               Featured Products
+            </option>
+            <option
+              value="lowToHigh"
+            >
+              Price - Low to High
+            </option>
+            <option
+              value="highToLow"
+            >
+              Price - High to Low
+            </option>
+          </select>
+        </span>
+      </div>
+    </div>
+  </div>,
+]
+`;

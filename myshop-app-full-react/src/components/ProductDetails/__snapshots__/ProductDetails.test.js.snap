@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Productdetails Component should have right component snapshot 1`] = `
+<div
+  className="slideshow-container"
+  id="slideshow-container"
+>
+  <div
+    className="text-center"
+  >
+    <h1>
+      No Products Found
+    </h1>
+  </div>
+</div>
+`;

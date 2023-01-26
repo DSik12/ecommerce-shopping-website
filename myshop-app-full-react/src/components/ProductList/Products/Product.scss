@@ -1,0 +1,205 @@
+@import "../../shared/ScssBreakpoint/Breakpoint.scss";
+@mixin browser-support() {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+@mixin align-center() {
+    text-align: center;
+    vertical-align: middle;
+}
+
+@mixin border-style() {
+    border: 2px solid black;
+}
+
+.products {
+    @include border-style();
+    margin: 110px 10px 10px;
+}
+.products .product-heading {
+    padding: 10px 0 0 20px;
+}
+
+.products-heading {
+    padding-left: 3%;
+}
+
+.text-box button {
+    background: linear-gradient(to bottom, #009ce5, #0096db);
+    color: #fff;
+    padding: 5px;
+    width: 200px;
+    border-radius: 3px;
+}
+
+.listing-section {
+    text-align: center;
+    align-items: center;
+}
+
+.item {
+    a {
+        text-decoration: none;
+        font-size: 15px;
+    }
+}
+
+.plus-button,
+.minus-button {
+    display: inline-block;
+    border: 1px solid black;
+    margin: 0;
+    width: 20px;
+    height: 26px;
+    @include align-center();
+    background: #eee;
+    @include browser-support();
+}
+
+.plus-button,
+.minus-button:hover {
+    cursor: pointer;
+}
+
+.product {
+    /* text-align: center; */
+    border: 1px solid black;
+    margin: 10px 20px;
+    padding: 10px 0;
+    transition: all 1s ease;
+}
+
+@media (min-width: $tablet-portrait) {
+    .productList {
+        display: flex;
+        @include border-style();
+        margin: 110px 5px 5px;
+    }
+
+    .products {
+        width: 72%;
+        border: none;
+        margin: 10px;
+    }
+
+    .products-heading {
+        display: none;
+    }
+
+    .product {
+        width: 90%;
+        height: 100%;
+        display: inline-block;
+        border-radius: 2%;
+        margin: 5px auto;
+        @include border-style();
+    }
+
+    .product {
+        .image-box {
+            height: 250px;
+            overflow: hidden;
+            border-radius: 2% 2% 0 0;
+        }
+        .images {
+            border-radius: 2% 2% 0 0;
+            transition: all 1s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .text-box {
+            width: 100%;
+            border-radius: 0 0 2% 2%;
+        }
+        .item {
+            clear: left;
+            width: 100%;
+            text-align: center;
+        }
+        .text-box button {
+            border-radius: 4px;
+            background-image: linear-gradient(to bottom, #009ce5, #0096db);
+            font-size: 15px;
+            width: 80%;
+            margin: auto;
+            justify-content: center;
+            color: #fff;
+        }
+    }
+    .text-box {
+        display: flex;
+        flex-direction: column;
+        button {
+            height: 30px;
+        }
+        .price {
+            height: 30px;
+        }
+        .item {
+            height: 100px;
+            text-overflow: ellipsis;
+            overflow: scroll;
+        }
+    }
+    .plus-button,
+    .minus-button {
+        display: inline-block;
+        border: 1px solid black;
+        margin: 0;
+        width: 20px;
+        height: 26px;
+        text-align: center;
+        vertical-align: middle;
+        background: #eee;
+        @include browser-support();
+    }
+
+    .plus-button,
+    .minus-button:hover {
+        cursor: pointer;
+    }
+    .listing-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 0; // TWO TIMES !
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+}
+
+@media (min-width: $laptop) {
+    .plus-button,
+    .minus-button {
+        display: inline-block;
+        border: 1px solid black;
+        margin: 0;
+        width: 20px;
+        height: 26px;
+        text-align: center;
+        vertical-align: middle;
+        background: #eee;
+        @include browser-support();
+    }
+
+    .plus-button,
+    .minus-button:hover {
+        cursor: pointer;
+    }
+    .listing-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+
+    .product:hover {
+        transform: scale(1.05);
+        overflow: hidden;
+        border-radius: 1%;
+    }
+}

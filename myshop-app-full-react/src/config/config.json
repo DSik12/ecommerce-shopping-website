@@ -1,0 +1,6 @@
+{
+    "productApi": "https://ecom-app-rest-api-v1.herokuapp.com/products",
+    "cartItemsApi": "https://ecom-app-rest-api-v1.herokuapp.com/cartItems",
+    "orderApi": "https://ecom-app-rest-api-v1.herokuapp.com/orders"
+
+}

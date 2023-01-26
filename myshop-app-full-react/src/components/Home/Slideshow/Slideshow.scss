@@ -1,0 +1,105 @@
+@import '../../shared/ScssBreakpoint/Breakpoint.scss';
+$border:2px solid black;
+$margin:10px;
+$background:linear-gradient(to bottom, #009ce5, #0096db);
+$background-color: rgba(168, 216, 235, 0.753);
+$arrowLeft-border-color: transparent black transparent transparent;
+$arrowRight-border-color: transparent transparent transparent black;
+
+.slideshowSection {
+  background-color: $background-color;
+  text-align: center;
+  display: block;
+  border: $border;
+  border-radius: 15px;
+  width: 100%;
+  margin-top: 120px;
+
+  .browserButton {
+    margin: 30px 10px;
+    background: $background;
+    text-align: center;
+    border: $border;
+    padding: 20px 0px;
+  }
+
+  .arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 36%;
+    border-style: solid;
+
+  }
+
+  .slideshowImage {
+    margin-top: 15px;
+    border: 5px solid black;
+  }
+
+  .slideShowBox {
+    .slideshowHeading {
+      padding: 50px 0px 0px 0px;
+    }
+
+    .arrowLeft {
+      border-width: 10px 15px 10px 0;
+      border-color: $arrowLeft-border-color;
+      left: 0;
+      margin-left: 15px;
+      background-color: $background-color;
+    }
+
+    .arrowRight {
+      border-width: 10px 0 10px 15px;
+      border-color: $arrowRight-border-color;
+      right: 0;
+      margin-right: 10px;
+      background-color: $background-color;
+    }
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+  .slideshowContent {
+    padding: 20px;
+  }
+}
+
+@media (min-width: $tablet-landscape) {
+  .slideshowSection {
+    .slideshowImageBox {
+      display: none;
+    }
+
+    .arrow {
+      top: 25%;
+    }
+  }
+}
+
+@media (min-width: $laptop) {
+  .slideShowBox {
+    padding: 0px;
+    margin: 5px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .slideshowSection {
+    .arrow {
+      top: 40%;
+    }
+
+    .slideshowImageBox {
+      display: block;
+    }
+
+    display: flex;
+    background-image: none;
+    border-radius: 15px;
+    margin-top: 120px $margin $margin $margin;
+    text-align: $margin;
+    border: $border;
+    width: auto;
+  }
+}

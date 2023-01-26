@@ -1,0 +1,83 @@
+@import "../shared/ScssBreakpoint/Breakpoint.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans" !important;
+}
+@mixin slideshow-img-mixin($width, $height) {
+  img {
+    width: $width;
+    height: $height;
+  }
+}
+@mixin slideshow-thumbnail-mixin($display) {
+  display: $display;
+}
+@mixin button-mixin($float, $margin-left, $margin-right, $padding) {
+  float: $float;
+  margin-left: $margin-left;
+  margin-right: $margin-right;
+  padding: $padding;
+}
+.sliderProductDetails {
+  @include slideshow-img-mixin(300px, 300px);
+  margin-left: 29px;
+}
+#thumbnailWrapper {
+  @include slideshow-thumbnail-mixin(none);
+}
+#productName {
+  margin-top: 50px;
+}
+.prevBtn {
+  @include button-mixin(left, 30px, 15px, 5px);
+}
+.nextBtn { /* button */
+  @include button-mixin(left, 265px, 0px, 5px);
+}
+#description { /* description */
+  padding: 10px;
+  margin: 30px 0px 30px 10px;
+}
+.productPrice { /* price margin */
+  margin: 10px 5px;
+}
+.sliderProductDetails {
+  img {
+    margin: 120px 0px 0px 10px;
+  }
+}
+@media only screen and (min-width: $tablet-portrait) {
+  .sliderProductDetails { /* image size of slide show tiles */
+    @include slideshow-img-mixin(600px, 600px);
+  }
+  #thumbnailWrapper { /* makes thumbnails flex and displays it back */
+    @include slideshow-thumbnail-mixin(flex);
+    float: left;
+    margin-left: 65px;
+  }
+
+  .thumbnailImg { /* thumbnail size and margin */
+    img {
+      width: 130px;
+      margin: 2px;
+    }
+  }
+  .prevBtn {
+    @include button-mixin(left, 60px, 15px, 5px);
+  }
+  .nextBtn { /* button */
+    @include button-mixin(left, 500px, 0px, 5px);
+  }
+  #description { /* description */
+    margin: 120px 0px 30px 10px;
+  }
+}
+@media only screen and (min-width: $laptop) {
+  .container { /* text and big image flex */
+    display: flex;
+    border-radius: 15px;
+    margin: 130px 0px 30px;
+  }
+}

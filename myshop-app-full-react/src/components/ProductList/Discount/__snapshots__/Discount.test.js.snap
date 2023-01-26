@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Discount Component should have right Discount component snapshot 1`] = `
+<section
+  className="checklist"
+>
+  <h3>
+    Filter
+  </h3>
+  <h3>
+    DISCOUNT
+  </h3>
+  <form
+    className="formcheck"
+    data-testid="discountEl"
+    id="discountForm"
+    onChange={[Function]}
+  >
+    <span
+      className="inFilter"
+    >
+      <input
+        className="disable"
+        id="Discount1"
+        name="check"
+        type="checkbox"
+      />
+      <label
+        htmlFor="Discount1"
+      >
+        10% or more
+      </label>
+    </span>
+    <span
+      className="inFilter"
+    >
+      <input
+        className="disable"
+        id="Discount2"
+        name="check"
+        type="checkbox"
+      />
+      <label
+        htmlFor="Discount2"
+      >
+        20% or more
+      </label>
+    </span>
+    <span
+      className="inFilter"
+    >
+      <input
+        className="disable"
+        id="Discount3"
+        name="check"
+        type="checkbox"
+      />
+      <label
+        htmlFor="Discount3"
+      >
+        30% or more
+      </label>
+    </span>
+    <span
+      className="inFilter"
+    >
+      <input
+        className="disable"
+        id="Discount4"
+        name="check"
+        type="checkbox"
+      />
+      <label
+        htmlFor="Discount4"
+      >
+        40% or more
+      </label>
+    </span>
+    <span
+      className="inFilter"
+    >
+      <input
+        className="disable"
+        id="Discount5"
+        name="check"
+        type="checkbox"
+      />
+      <label
+        htmlFor="Discount5"
+      >
+        Below 10%
+      </label>
+    </span>
+  </form>
+</section>
+`;

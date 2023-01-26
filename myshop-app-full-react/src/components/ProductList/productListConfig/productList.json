@@ -1,0 +1,14 @@
+
+{
+    "start0to9" : "_start=0&_end=9&",
+    "start9to12" : "_start=9&_end=12",
+    "laptop" : "q=laptop",
+    "mobile" : "q=Smartphones",
+    "featured" : "featured=true",
+    "sortAsc" : "_sort=price&_order=asc",
+    "sortDesc" : "_sort=price&_order=desc",
+    "bestSeller" : "_sort=bestSellerRanking",
+    "products" : "/products",
+    "products0to9" : "/products?_start=0&_end=9",
+    "products9to12" : "/products?_start=9&_end=12"
+}

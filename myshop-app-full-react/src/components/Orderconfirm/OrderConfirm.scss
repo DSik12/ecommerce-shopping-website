@@ -1,0 +1,697 @@
+/* Main starts*/
+/*Page 6,7,8,9 ----- Common Components for all*/
+
+.itemsDetails {
+  margin: 150px 40px 0px 40px;
+  color: black;
+  display: flex;
+
+  p:nth-child(2) {
+    margin-left: 30px;
+  }
+}
+
+/*Order Step Buttons*/
+
+.orderStep a {
+  color: black;
+  text-decoration: none;
+  background: white;
+  height: 30px;
+  border: 2px solid black;
+  width: 83%;
+  text-align: center;
+  margin: 30px 32px;
+  box-shadow: 1px 2px rgba(0, 0, 0, 0.774);
+  display: block;
+
+  &:hover {
+    background: linear-gradient(to bottom, #05b251, #05a84c);
+  }
+}
+
+#oneStep {
+  background: linear-gradient(to bottom, #05b251, #05a84c);
+  color: white;
+}
+
+.orderStep {
+  margin-top: 40px 0px 30px 40px;
+
+  h1 {
+    text-align: center;
+  }
+}
+
+/*page6*/
+/*Forms Section*/
+
+.formsSection {
+  display: block;
+
+  fieldset {
+    margin: 50px 30px;
+    border-color: black;
+  }
+
+  legend {
+    padding: 5px 10px;
+    color: black;
+  }
+
+  input {
+    width: 100%;
+    border-color: black;
+    height: 30px;
+  }
+
+  div {
+    margin: 20px 15px;
+  }
+}
+
+/*page 8 ---- Payments Page*/
+
+.paymentInformation {
+  margin: 0px 40px;
+
+  input {
+    display: block;
+    margin: 25px;
+    height: 25px;
+    width: 250px;
+  }
+
+  #cardNo {
+    margin-top: 25px;
+  }
+
+  #cvv {
+    margin-bottom: 60px;
+    width: 80px !important;
+  }
+}
+
+/*Continue Button  --- Common for all pages*/
+
+.continueButton {
+  width: 200px;
+  background: linear-gradient(to bottom, #05b251, #05a84c);
+  border: 2px solid black;
+  padding: 10px 50px;
+  margin: 20px 15px 15px 40px;
+  box-shadow: 1px 2px rgba(0, 0, 0, 0.774);
+  cursor: pointer;
+
+  a {
+    color: white;
+    text-decoration: none;
+
+    &:after {
+      content: '\00bb';
+      opacity: 0;
+      transition: 1s;
+    }
+  }
+
+  &:hover a:after {
+    opacity: 1;
+  }
+}
+
+.continue {
+  margin-bottom: 200px;
+}
+
+/*page10--Order Confirmation page*/
+
+.orderComplete {
+  margin-top: 200px;
+  margin-bottom: 100px;
+  margin-left: 40px;
+  margin-right: 40px;
+
+  h1 {
+    margin-bottom: 0px;
+    text-align: center;
+  }
+
+  #order {
+    text-align: center;
+    margin: 40px 30px;
+  }
+}
+
+#orderDelivery {
+  text-align: center;
+
+  p {
+    margin-bottom: 30px;
+  }
+}
+
+/*Page 9----final-checkout page*/
+
+.confirmOrderDetails fieldset {
+  margin: 10px 40px;
+}
+
+.editDetails div p:nth-child(1) {
+  font-weight: bold;
+  margin: 5px;
+}
+
+.cartItemView {
+  table {
+    margin: 40px 40px;
+  }
+
+  td {
+    border-bottom: black solid;
+  }
+
+  h6 {
+    border: rgba(0, 0, 0, 0.774) solid;
+    width: fit-content;
+    padding: 5px 20px;
+    margin-left: 10px;
+  }
+
+  img {
+    margin: 13px;
+  }
+
+  tr td {
+    &:nth-child(4) {
+      text-align: center;
+    }
+
+    &:nth-child(1) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  td p:nth-child(2) {
+    display: none;
+    text-align: center;
+  }
+
+  tr td:nth-child(1) {
+    text-align: left;
+    display: flex;
+  }
+
+  p {
+    margin: 15px;
+    text-align: center;
+  }
+}
+
+.placeOrder {
+  display: flex;
+  margin: 50px 40px 90px 40px;
+
+  a {
+    min-width: 100px;
+    background: linear-gradient(to bottom, #05b251, #05a84c);
+    border: 2px solid black;
+    padding: 10px 29px;
+    box-shadow: 1px 2px rgba(0, 0, 0, 0.774);
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+  }
+
+  #orderButton {
+    width: 50%;
+  }
+
+  #totalMoney {
+    width: 50%;
+    text-align: right;
+  }
+}
+
+#totalMoney p {
+  &:nth-child(3) {
+    margin-top: 10px;
+  }
+
+  margin-top: 5px;
+}
+
+/*page9- section1-- top confirm box */
+
+.editDetails {
+  display: flex;
+  flex-wrap: wrap;
+
+  div {
+    margin: 0px 0px 50px 0px;
+    width: 50%;
+  }
+}
+
+/*page 7 shipping*/
+
+.descriptionShipping {
+  display: none;
+}
+
+.firstShippingProduct {
+  display: flex;
+  margin: 30px 0px;
+}
+
+.shippingCart {
+  margin: 40px 10px;
+
+  img {
+    margin: 30px 5px 0px 0px;
+  }
+}
+
+.describeFirst .sellerFirst {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.firstProduct {
+  display: flex;
+  flex-wrap: wrap;
+
+  p {
+    padding: 10px 20px 10px 0px;
+  }
+}
+
+.freeFirst {
+  .freeGreen {
+    color: #05b251;
+  }
+
+  padding-bottom: 20px;
+  border-bottom: 2px solid;
+}
+
+.flipkart {
+  height: 20px;
+  width: 50px;
+  margin-left: 30px;
+}
+
+.sellerFirst {
+  display: inline;
+}
+
+.amazon {
+  display: flex;
+  margin: 80px 40px;
+  border: 2px solid black;
+  height: 100px;
+  overflow: hidden;
+
+  img {
+    margin-left: -10px;
+  }
+
+  p {
+    margin-top: 20px;
+  }
+}
+
+.descripeItem {
+  border: 0px white solid;
+  height: 20px;
+  overflow: hidden;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up)*/
+@media only screen and (min-width: 600px) {
+  .formsSection {
+    display: block;
+  }
+
+  /*Order Step Buttons-Page 6,7,8,9*/
+
+  .orderStep a {
+    color: black;
+    text-decoration: none;
+    background: white;
+    height: 30px;
+    border: 2px solid black;
+    width: 150px;
+    text-align: center;
+    margin: 30px 32px;
+    box-shadow: 1px 2px rgba(0, 0, 0, 0.774);
+
+    &:hover {
+      background: linear-gradient(to bottom, #05b251, #05a84c);
+    }
+  }
+
+  #oneStep {
+    background: linear-gradient(to bottom, #05b251, #05a84c);
+    color: white;
+  }
+
+  .orderStep {
+    display: flex;
+    margin-top: 40px 0px 30px 40px;
+
+    h1 {
+      margin-right: 60px;
+    }
+  }
+
+  /*page9- section1*/
+
+  .editDetails {
+    display: flex;
+    flex-wrap: wrap;
+
+    div {
+      margin: 0px 0px 50px 0px;
+      width: 25%;
+    }
+  }
+
+  /*page9-section 2*/
+
+  .cartItemView {
+    tr td:nth-child(1) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    td p:nth-child(2) {
+      display: none;
+      text-align: center;
+    }
+
+    p {
+      margin: 15px;
+      text-align: center;
+    }
+  }
+
+  /*page shipping*/
+
+  .amazon {
+    display: flex;
+    margin: 80px 40px;
+    border: 2px solid black;
+
+    img {
+      margin-left: -10px;
+    }
+  }
+
+  .shippingCart {
+    img {
+      margin: 30px 5px 0px 0px;
+    }
+
+    margin: 40px 10px;
+  }
+
+  .descriptionShipping {
+    display: none;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .formsSection {
+    display: block;
+  }
+
+  /*Order Step Buttons-Page 6,7,8,9*/
+
+  .orderStep a {
+    color: black;
+    text-decoration: none;
+    background: white;
+    height: 30px;
+    border: 2px solid black;
+    width: 150px;
+    text-align: center;
+    margin: 0px 20px;
+    box-shadow: 1px 2px rgba(0, 0, 0, 0.774);
+
+    &:hover {
+      background: linear-gradient(to bottom, #05b251, #05a84c);
+    }
+  }
+
+  #oneStep {
+    background: linear-gradient(to bottom, #05b251, #05a84c);
+    color: white;
+  }
+
+  .orderStep {
+    display: flex;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-left: 40px;
+
+    h1 {
+      margin-right: 60px;
+    }
+  }
+
+  .editDetails {
+    display: flex;
+    flex-wrap: nowrap;
+
+    div {
+      width: 25%;
+      margin: 20px 0px 50px 30px;
+    }
+  }
+
+  /*page9-section 2*/
+
+  .cartItemView {
+    tr td:nth-child(1) {
+      display: flex;
+      flex-direction: row;
+    }
+
+    td p:nth-child(2) {
+      display: unset;
+      text-align: center;
+    }
+
+    p {
+      margin: 15px;
+      text-align: left;
+    }
+  }
+
+  /*page shipping*/
+
+  .amazon {
+    display: none;
+  }
+
+  .shippingCart {
+    img {
+      margin: 30px 50px 0px 10px;
+    }
+
+    margin: 40px;
+  }
+
+  .descriptionShipping {
+    display: unset;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 920px) {
+  .formsSection {
+    display: flex;
+  }
+
+  .descriptionShipping {
+    display: unset;
+  }
+
+  .addressForm1, .addressForm2 {
+    width: 50%;
+  }
+
+  /*Order Step Buttons-Page 6,7,8,9*/
+
+  .orderStep a {
+    color: black;
+    text-decoration: none;
+    background: white;
+    height: 30px;
+    border: 2px solid black;
+    width: 150px;
+    text-align: center;
+    margin: 0px 20px;
+    box-shadow: 1px 2px rgba(0, 0, 0, 0.774);
+
+    &:hover {
+      background: linear-gradient(to bottom, #05b251, #05a84c);
+    }
+  }
+
+  #oneStep {
+    background: linear-gradient(to bottom, #05b251, #05a84c);
+    color: white;
+  }
+
+  .orderStep {
+    display: flex;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-left: 40px;
+
+    h1 {
+      margin-right: 60px;
+    }
+  }
+
+  /*page9- section1*/
+
+  .editDetails {
+    display: flex;
+    flex-wrap: nowrap;
+
+    div {
+      margin: 20px 0px 50px 30px;
+      width: 25%;
+    }
+  }
+
+  /*page9-section 2*/
+
+  .cartItemView {
+    tr td:nth-child(1) {
+      display: flex;
+      flex-direction: row;
+    }
+
+    td p:nth-child(2) {
+      display: unset;
+      text-align: center;
+    }
+
+    p {
+      margin: 15px;
+      text-align: left;
+    }
+  }
+
+  /*page shipping*/
+
+  .amazon {
+    display: none;
+  }
+
+  .shippingCart {
+    img {
+      margin: 30px 50px 0px 10px;
+    }
+
+    margin: 40px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up)  - TV */
+@media only screen and (min-width: 1200px) {
+  .descriptionShipping {
+    display: unset;
+  }
+
+  .addressForm1, .addressForm2 {
+    width: 50%;
+  }
+
+  /*Order Step Buttons-Page 6,7,8,9*/
+
+  .orderStep a {
+    color: black;
+    text-decoration: none;
+    background: white;
+    height: 30px;
+    border: 2px solid black;
+    width: 150px;
+    text-align: center;
+    margin: 0px 20px;
+    box-shadow: 1px 2px rgba(0, 0, 0, 0.774);
+
+    &:hover {
+      background: linear-gradient(to bottom, #05b251, #05a84c);
+    }
+  }
+
+  #oneStep {
+    background: linear-gradient(to bottom, #05b251, #05a84c);
+    color: white;
+  }
+
+  .orderStep {
+    display: flex;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    margin-right: 40px;
+    margin-left: 40px;
+
+    h1 {
+      margin-right: 30px;
+    }
+  }
+
+  /*page9 - section1 */
+
+  .editDetails {
+    display: flex;
+    flex-wrap: nowrap;
+
+    div {
+      width: 25%;
+      margin: 20px 0px 50px 30px;
+    }
+  }
+
+  /*page9-section 2*/
+
+  .cartItemView {
+    tr td:nth-child(1) {
+      display: flex;
+      flex-direction: row;
+    }
+
+    td p:nth-child(2) {
+      display: unset;
+      text-align: center;
+    }
+
+    p {
+      margin: 15px;
+      text-align: left;
+    }
+  }
+
+  /*page shipping*/
+
+  .amazon {
+    display: none;
+  }
+
+  .shippingCart {
+    img {
+      margin: 30px 50px 0px 10px;
+    }
+
+    margin: 40px;
+  }
+}

@@ -1,0 +1,38 @@
+@import "../../shared/ScssBreakpoint/Breakpoint.scss";
+@mixin a-styles() {
+    a {
+        border: 1px solid black;
+        padding: 1px;
+    }
+}
+
+@mixin font-style($Font_param, $display_param) {
+    font-size: $Font_param;
+    display: $display_param;
+}
+
+.center {
+    @include font-style(10px, flex);
+    margin: 1% 5% 1% 15%;
+}
+
+.pagination1 {
+    @include a-styles();
+}
+
+.pagination2 {
+    @include a-styles();
+}
+
+@media (min-width: $tablet-portrait) {
+    .center {
+        @include font-style(15px, flex);
+        margin-left: 40%; /*adjust this part*/
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+    .pagination1 .pagination2 {
+        width: 100%;
+        text-align: center;
+    }
+}

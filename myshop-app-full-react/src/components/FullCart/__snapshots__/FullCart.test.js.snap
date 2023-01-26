@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FullCart Component should have right FullCart comp snapshot 1`] = `
+<div
+  className="cart-page"
+>
+  <table
+    className="full-cart-table"
+  >
+    <caption
+      className="shopping"
+    >
+      Shopping Cart
+    </caption>
+    <thead>
+      <tr
+        className="full-cart-th"
+      >
+        <th />
+        <th>
+          Item(s)
+        </th>
+        <th>
+          Price
+        </th>
+        <th>
+          Qty
+        </th>
+        <th
+          className="total"
+        >
+          Total
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      id="fullTableBody"
+      onClick={[Function]}
+    />
+    <tbody>
+      <tr
+        className="full-cart-subtotal"
+      >
+        <td
+          className="full-cart-sub"
+          colSpan={6}
+        >
+          <div>
+            <span
+              id="fullTotalAmount"
+            >
+              Total: Rs.
+              0
+            </span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    <button
+      className="update"
+      id="update"
+      onClick={[Function]}
+      type="button"
+    >
+      Update
+    </button>
+    <a
+      className="btn"
+      href="/checkout/addresscheckout"
+      onClick={[Function]}
+    >
+      Checkout
+    </a>
+  </div>
+  <div
+    className="total-price"
+  >
+    <a
+      className="btn"
+      href="/checkout/addresscheckout"
+      onClick={[Function]}
+    >
+      Checkout
+    </a>
+  </div>
+</div>
+`;

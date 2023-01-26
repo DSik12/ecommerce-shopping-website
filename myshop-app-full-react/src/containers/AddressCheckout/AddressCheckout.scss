@@ -1,0 +1,382 @@
+
+@import '../../components/shared/ScssBreakpoint/Breakpoint.scss';
+
+$color_1: black;
+$color_2: white;
+
+
+@mixin itemdetails {
+  margin: 150px 40px 0px 40px;
+  color: $color_1;
+  display: flex;
+}
+
+@mixin ordersteplandscape {
+  color: $color_1;
+  text-decoration: none;
+  background: $color_2;
+  height: 30px;
+  border: 2px solid $color_1;
+  width: 150px;
+  text-align: center;
+  margin: 0px 20px;
+  box-shadow: 1px 2px rgba(0, 0, 0, 0.774);
+}
+
+@mixin orderstepdesktop {
+  color: $color_1;
+  text-decoration: none;
+  background: $color_2;
+  height: 30px;
+  border: 2px solid black;
+  width: 150px;
+  text-align: center;
+  margin: 0px 20px;
+  box-shadow: 1px 2px rgba(0, 0, 0, 0.774)
+}
+
+@mixin orderstepportraittablet {
+  color: $color_1;
+  text-decoration: none;
+  background: $color_2;
+  height: 30px;
+  border: 2px solid $color_1;
+  width: 150px;
+  text-align: center;
+  margin: 30px 32px;
+  box-shadow: 1px 2px rgba(0, 0, 0, 0.774);
+}
+
+@mixin checkoutheader {
+  background: linear-gradient(to bottom, #05b251, #05a84c);
+  color: $color_2;
+}
+
+@mixin continuebutton {
+  width: 200px;
+  background: linear-gradient(to bottom, #05b251, #05a84c);
+  border: 2px solid $color_1;
+  padding: 10px 50px;
+  margin: 20px 15px 15px 40px;
+  box-shadow: 1px 2px rgba(0, 0, 0, 0.774);
+  cursor: pointer;
+  color: $color_2;
+  font-size: larger;
+}
+
+@mixin orderstepextralargedevice {
+  color: $color_1;
+  text-decoration: none;
+  background: $color_2;
+  height: 30px;
+  border: 2px solid $color_1;
+  width: 150px;
+  text-align: center;
+  margin: 0px 20px;
+  box-shadow: 1px 2px rgba(0, 0, 0, 0.774);
+}
+
+@mixin ordersteppart {
+  color: $color_1;
+  text-decoration: none;
+  background: $color_2;
+  height: 30px;
+  border: 2px solid $color_1;
+  width: 83%;
+  text-align: center;
+  margin: 30px 32px;
+  box-shadow: 1px 2px rgba(0, 0, 0, 0.774);
+  display: block;
+}
+
+.itemsDetails {
+  @include itemdetails;
+
+  p:nth-child(2) {
+    margin-left: 30px;
+  }
+}
+
+@mixin addressFormWidth(){
+    width: 50%;
+}
+
+@mixin orderStep() {
+  display: flex;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+@mixin hoverFunc(){
+    &:hover {
+    background: linear-gradient(to bottom, #05b251, #05a84c);
+  }
+}
+
+@mixin formSelection(){
+  display: block;
+  margin: 0 40px;
+  font-weight: bold;
+
+}
+
+/*Order Step Buttons*/
+.orderStep a {
+  @include ordersteppart;
+}
+
+#address-checkout {
+  @include checkoutheader;
+}
+
+.selectClass{
+  width: 100%;
+  border:2px solid black; ;
+  height: 30px;
+}
+
+.cartItemView {
+  tr td:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  td p:nth-child(2) {
+    display: none;
+    text-align: center;
+  }
+
+  p {
+    margin: 15px;
+    text-align: center;
+  }
+}
+
+.formsSection {
+
+  display: block;
+  fieldset {
+    margin: 50px 30px;
+    border-color: black;
+  }
+  legend {
+    padding: 5px 10px;
+    color: black;
+  }
+  input {
+    width: 100%;
+    border-color: black;
+    height: 30px;
+  }
+  div {
+    margin: 20px 15px;
+  }
+  .addressCheckbox {
+    @include formSelection()
+  }
+}
+
+.continue .addressCheckbox {
+  display: none;
+}
+
+#checkboxIdMobile {
+  width: 15px;
+  height: 15px;
+}
+
+/* Recently added*/
+
+#errorMsgPayment {
+  background-color: rgb(211, 102, 102);
+  font-weight: bolder;
+  width: 200px;
+  margin: 0 25px;
+}
+
+#errorMsg {
+  background-color: rgb(211, 102, 102);
+  font-weight: bolder;
+}
+
+#billingPin,
+#shippingPin {
+  -moz-appearance: textfield;
+}
+
+#billingPin {
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+#shippingPin {
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.continueButton {
+  @include continuebutton
+}
+
+.continue {
+  margin-bottom: 200px;
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up)*/
+@media(min-width: $tablet-portrait) {
+  .formsSection {
+    display: block;
+
+    .addressCheckbox {
+        @include formSelection();
+    }
+  }
+
+  .continue .addressCheckbox {
+    display: none;
+  }
+
+  /*Order Step Buttons-Page 6,7,8,9*/
+
+  .orderStep a {
+    @include orderstepportraittablet;
+  }
+
+
+  .orderStep {
+    display: flex;
+    margin-top: 40px 0px 30px 40px;
+
+    h1 {
+      margin-right: 60px;
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media(min-width: $tablet-landscape)  {
+  .formsSection {
+    display: block;
+
+    .addressCheckbox {
+      @include formSelection();
+    }
+  }
+
+  .continue .addressCheckbox {
+    display: none;
+  }
+
+  /*Order Step Buttons-Page 6,7,8,9*/
+
+  .orderStep a {
+    @include ordersteplandscape;
+  }
+
+  .orderStep {
+    @include orderStep()
+  }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media(min-width: $laptop) {
+  .formsSection {
+    display: flex;
+
+    .addressCheckbox {
+      display: none;
+    }
+  }
+
+  .continue .addressCheckbox {
+    @include formSelection();
+  }
+
+  #checkboxIdDesktop {
+    width: 15px;
+    height: 15px;
+  }
+
+  .descriptionShipping {
+    display: unset;
+  }
+
+  .addressForm1,
+  .addressForm2 {
+    @include addressFormWidth();
+  }
+
+  /*Order Step Buttons-Page 6,7,8,9*/
+
+  .orderStep a {
+    @include orderstepdesktop();
+    @include hoverFunc();
+  }
+
+  .orderStep {
+  @include orderStep();
+    h1 {
+      margin-right: 60px;
+    }
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up)  - TV */
+@media(min-width: $desktop) {
+  .errorMessage {
+    background-color: rgb(211, 102, 102);
+    font-weight: bolder;
+  }
+
+  .formsSection {
+    display: flex;
+
+    .addressCheckbox {
+      display: none;
+    }
+  }
+
+  .continue .addressCheckbox {
+      @include formSelection();
+  }
+
+  #checkboxIdDesktop {
+    width: 15px;
+    height: 15px;
+  }
+
+  .descriptionShipping {
+    display: unset;
+  }
+
+  .addressForm1,
+  .addressForm2 {
+    @include addressFormWidth();
+  }
+
+  /*Order Step Buttons-Page 6,7,8,9*/
+
+  .orderStep a {
+    @include orderstepextralargedevice;
+    @include hoverFunc();
+  }
+
+  .orderStep {
+    @include orderStep();
+    h1 {
+      margin-right: 30px;
+    }
+  }
+}

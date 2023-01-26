@@ -1,0 +1,347 @@
+@import '../../components/shared/ScssBreakpoint/Breakpoint.scss';
+$color_1: black;
+$color_2: white;
+$background-color_1: rgb(211, 102, 102);
+
+@mixin oneStep() {
+	background: linear-gradient(to bottom, #05b251, #05a84c);
+	color: $color_2;
+}
+
+@mixin orderStep-a() {
+	color: $color_1;
+	text-decoration: none;
+	background: white;
+	height: 30px;
+	border: 2px solid black;
+	width: 150px;
+	text-align: center;
+	margin: 0px 20px;
+	box-shadow: 1px 2px rgba(0, 0, 0, 0.774);
+
+	&:hover {
+		background: linear-gradient(to bottom, #05b251, #05a84c);
+	}
+}
+
+@mixin orderStep() {
+	display: flex;
+	margin-bottom: 30px;
+	margin-top: 40px;
+	margin-right: 40px;
+	margin-left: 40px;
+}
+
+@mixin orderStepMob() {
+	color: $color_1;
+	text-decoration: none;
+	background: white;
+	height: 30px;
+	border: 2px solid black;
+	width: 83%;
+	text-align: center;
+	margin: 30px 32px;
+	box-shadow: 1px 2px rgba(0, 0, 0, 0.774);
+	display: block;
+	&:hover {
+		background: linear-gradient(to bottom, #05b251, #05a84c);
+	}
+}
+.itemsDetails {
+  margin: 150px 40px 0px 40px;
+  color:  $color_1;
+  display: flex;
+
+  p:nth-child(2) {
+    margin-left: 30px;
+  }
+}
+.orderStep {
+	a {
+		@include orderStepMob();
+	}
+	margin-top: 40px 0px 30px 40px;
+	h1 {
+		text-align: center;
+	}
+}
+
+#final-checkout{
+  background: linear-gradient(to bottom, #05b251, #05a84c);
+  color: white;
+}
+#oneStep {
+	@include oneStep();
+}
+
+
+.confirmOrderDetails fieldset {
+  margin: 10px 40px;
+}
+
+.editDetails div p:nth-child(1) {
+  font-weight: bold;
+  margin: 5px;
+}
+
+.cartItemView {
+  table {
+    width: 100%;
+  }
+
+  tr th {
+    margin-left: auto;
+    text-align: left;
+
+    &:nth-child(1) {
+      padding-left: 175px;
+    }
+  }
+
+  td {
+    border-bottom: black solid;
+  }
+
+  h6 {
+    width: fit-content;
+    padding: 5px 20px;
+    margin-left: 10px;
+  }
+
+  img {
+    margin: 13px;
+  }
+
+  tr td {
+    &:nth-child(4) {
+      text-align: center;
+    }
+
+    &:nth-child(1) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  td p:nth-child(2) {
+    display: none;
+    text-align: center;
+  }
+
+  tr td:nth-child(1) {
+    text-align: left;
+    display: flex;
+  }
+
+  p {
+    margin: 15px;
+    text-align: center;
+  }
+}
+
+.placeOrder {
+ display: flex;
+  margin: 50px 40px 90px 40px;
+
+  button {
+    min-width: 100px;
+    background: linear-gradient(to bottom, #05b251, #05a84c);
+    border: 2px solid black;
+    padding: 10px 29px;
+    box-shadow: 1px 2px rgba(0, 0, 0, 0.774);
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+  }
+
+  #orderButton {
+    width: 50%;
+  }
+
+  #totalMoney {
+    width: 50%;
+    text-align: right;
+  }
+}
+
+#totalMoney p {
+  &:nth-child(3) {
+    margin-top: 10px;
+  }
+
+  margin-top: 5px;
+}
+
+.editDetails {
+  display: flex;
+  flex-wrap: wrap;
+
+  div {
+    margin: 0px 0px 50px 0px;
+    width: 50%;
+  }
+}
+
+@media(min-width: $tablet-portrait) {
+	.orderStep {
+		a {
+			@include orderStepMob();
+		}
+		display: flex;
+		margin-top: 40px 0px 30px 40px;
+		h1 {
+			margin-right: 60px;
+		}
+	}
+	#oneStep {
+		@include oneStep();
+	}
+
+
+  .editDetails {
+    display: flex;
+    flex-wrap: wrap;
+
+    div {
+      margin: 0px 0px 50px 0px;
+      width: 25%;
+    }
+  }
+
+  .cartItemView {
+    tr td:nth-child(1) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    td p:nth-child(2) {
+      display: none;
+      text-align: center;
+    }
+
+    p {
+      margin: 15px;
+      text-align: center;
+    }
+  }
+}
+
+@media(min-width: $tablet-landscape) {
+  .orderStep {
+		a {
+			@include orderStep-a();
+		}
+		@include orderStep();
+
+		h1 {
+			margin-right: 60px;
+		}
+	}
+	#oneStep {
+		@include oneStep();
+	}
+
+  .editDetails {
+    display: flex;
+    flex-wrap: nowrap;
+
+    div {
+      width: 25%;
+      margin: 20px 0px 50px 30px;
+    }
+  }
+
+  .cartItemView {
+    tr td:nth-child(1) {
+      display: flex;
+      flex-direction: row;
+    }
+
+    td p:nth-child(2) {
+      display: unset;
+      text-align: center;
+    }
+
+    p {
+      margin: 15px;
+      text-align: left;
+    }
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  .addressForm2 {
+    width: 50%;
+  }
+
+  /*page9- section1*/
+
+  .editDetails {
+    display: flex;
+    flex-wrap: nowrap;
+
+    div {
+      margin: 20px 0px 50px 30px;
+      width: 25%;
+    }
+  }
+
+  .cartItemView {
+    tr td:nth-child(1) {
+      display: flex;
+      flex-direction: row;
+    }
+
+    td p:nth-child(2) {
+      display: unset;
+      text-align: center;
+    }
+
+    p {
+      margin: 15px;
+      text-align: left;
+    }
+  }
+}
+
+@media(min-width: $desktop) {
+  .orderStep {
+		a {
+			@include orderStep-a();
+		}
+		@include orderStep();
+
+		h1 {
+			margin-right: 30px;
+		}
+	}
+	#oneStep {
+		@include oneStep();
+	}
+  .editDetails {
+    display: flex;
+    flex-wrap: nowrap;
+
+    div {
+      width: 25%;
+      margin: 20px 0px 50px 30px;
+    }
+  }
+
+  .cartItemView {
+    tr td:nth-child(1) {
+      display: flex;
+      flex-direction: row;
+    }
+
+    td p:nth-child(2) {
+      display: unset;
+      text-align: center;
+    }
+
+    p {
+      margin: 15px;
+      text-align: left;
+    }
+  }
+}
